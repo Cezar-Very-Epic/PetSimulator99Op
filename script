@@ -335,7 +335,7 @@ function Aimbot:_GetClosestTargetInRadius()
         local distance3D = (targetPos - myRootPos).Magnitude
 
         if distance3D <= self.Options.MaxDistance then
-            local screenPos, onScreen = Camera:WorldToScreenPoint(targetPos)
+            local screenPos, onScreen = Camera:WorldToViewportPoint(targetPos)
 
             if onScreen then
                 local screenVector = Vector2.new(screenPos.X, screenPos.Y)
