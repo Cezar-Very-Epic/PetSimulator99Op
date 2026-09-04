@@ -17,7 +17,7 @@ local DEFAULT_OPTIONS = {
     TeamCheck = false,
     TargetBodyPart = "HumanoidRootPart",
     CustomCharacterMode = "Default",
-	/*
+	--[[
         - "Default": the game does not use custom characters or anything similar (most games)
 
         - "Character Folder Specified": the game uses custom characters and puts them all in a folder, the name matches the player names
@@ -58,10 +58,10 @@ local DEFAULT_OPTIONS = {
         - "Automatic" = the script will try to find a character folder and parts to hit on it's own. May cause bugs, not recommended, but can save a lot of speed.
                          e.g. Aimbot.new({CustomCharacterMode = "Automatic"})
     
-    */
+    ]]
     CharacterFolder = nil,
     TeamMode = "Default", -- Only for teamcheck
-	/*
+	--[[
         - "Default": the game just uses the default roblox teams (most games)
 
         - "Custom Team": the game uses a way to get custom teams. Like instead of Player.Team it uses Player.Values.TeamValue.Value or smth. Like you will get a player and you need to make the function
@@ -74,7 +74,7 @@ local DEFAULT_OPTIONS = {
                             end
                             Aimbot.new({TeamMode = "CustomTeam",
                                         GetTeamFunction = GetTeam})
-    */
+    ]]
     GetTeamFunction = nil,
     SingleObject = false,
     SingleObjectToLookAt = nil -- Accepts a BasePart or a Model
